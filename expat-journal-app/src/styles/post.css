@@ -1,0 +1,167 @@
+.post-card{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.post-card img {
+    height: 200px;
+}
+
+
+.post-card a{
+    text-decoration: none;
+}
+
+div.post{
+    margin: 20px;
+    padding: 5px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
+    transition: all .2s linear;
+    position: relative;
+    overflow: visible;
+}
+
+div.post h2 {
+    color: black;
+    padding-bottom: 10px;
+}
+
+div.post p {
+    padding-top: 10px;
+}
+
+div.post:hover:after{
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    left: calc(-1  * 2px);
+    top: calc(-1 * 2px);
+    height: calc(100% + 2px * 2);
+    width: calc(100% + 2px * 2);
+    background-image: linear-gradient(60deg, #fee89f, #f3ef18, #ff0000);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: animateGradient 3s ease alternate infinite;
+}
+
+.post h2{
+    font-weight: bold;
+}
+
+/* Individual Post Styles */
+
+.singlePost {
+    padding-top: 250px;
+    padding-bottom: 40px;
+}
+.singlePost h2 {
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+
+.singlePost p {
+    font-size: 2.5rem;
+    padding-top: 20px;
+    
+}
+
+.singlePost img {
+    width: 60%;
+}
+
+/* Edit Post Button */
+
+svg.editPostButton {
+    color: black;
+    font-size: 5rem;
+}
+
+.editPostButton p {
+    color: black;
+}
+
+.editLink {
+    text-decoration: none;
+}
+
+.editButtonText {
+    color: black;
+    font-size: 2rem;
+    
+}
+
+@keyframes animateGradient{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+svg.buttonStyle {
+    font-size: 5rem;
+    margin-top: 30px;
+}
+
+svg.buttonStyle p  {
+    font-size: 2rem;
+}
+
+.createPostText {
+    font-size: 1.5rem;
+}
+
+
+
+/* svg.logout {
+    font-size: 5rem;
+}
+
+svg.createPostButton {
+	font-size: 5rem;
+	
+} */
+
+
+.buttonContainer {
+    display: inline-block;
+}
+
+.buttonContainer p {
+    font-size: 2rem;
+}
+
+svg.buttonContainer {
+    
+	margin: 0 auto;
+	color:black;
+	margin-top: 10px;
+}
+
+div.header-menu {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 500px){
+    div.header-menu{
+		display: none;
+	}
+}
